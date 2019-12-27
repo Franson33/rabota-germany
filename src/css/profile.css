@@ -1,0 +1,156 @@
+.main-container__form-container {
+    display: flex;
+    height: auto;
+}
+
+.form-container__profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px 0;
+    border: 2px solid #50c5eb;
+    border-radius: 10px;
+    font-size: 18px;
+    background-image: linear-gradient(RGBA(80, 197, 235, 0.1), RGBA(0, 79, 155, 0.1));
+}
+
+.profile-form__form-item {
+    display: flex;
+    width: 95%;
+    height: 50px;
+    margin: auto;
+}
+
+.form-item__profile-label {
+    width: 30%;
+    margin: auto;
+}
+
+.form-item__profile-input {
+    width: 70%;
+    border-radius: 5px;
+    height: 25px;
+    margin: auto;
+}
+
+.item--half {
+    width: 45%;
+}
+
+.title--radio {
+    width: 60%;
+}
+
+.label--radio {
+    width: 15%;
+    text-align: right;
+}
+
+.input--radio {
+    width: 5%;
+}
+
+.input-textarea {
+    height: auto;
+}
+
+.label-term-stay {
+    width: 40%;
+}
+
+.item-term-stay {
+    width: 60%;
+}
+
+.item--button {
+    margin: 30px auto auto auto;
+}
+
+.item--education {
+    height: auto;
+    margin: 10px auto 20px auto;
+    border: 2px solid #50c5eb;
+    border-radius: 5px;
+}
+
+.form-item__education-item {
+    display: flex;
+    width: 95%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.education-item__education-label {
+    width: 30%;
+    margin: auto;
+}
+
+.education-item__education-input {
+    width: 70%;
+    border-radius: 5px;
+    height: auto;
+    margin: auto;
+}
+
+.label--upload {
+    width: 70%;
+}
+
+.input--upload {
+    width: 30%;
+}
+
+@media (max-width: 1024px) {
+    .form-container__profile-form {
+        width: 95%;
+    }
+}
+
+@media (max-width: 648px) {
+    .profile-form__form-item {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .form-item__profile-label {
+        width: 90%
+    }
+
+    .form-item__profile-input {
+        width: 100%;
+    }
+
+    .form-item__education-item {
+        flex-direction: column;
+    }
+
+    .item--radio {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .education-item__education-label {
+        width: 90%;
+    }
+
+    .education-item__education-input {
+        width: 90%;
+    }
+
+    .title--radio {
+        width: 100%;
+        text-align: center;
+    }
+
+    .label--radio {
+        width: 40%;
+        height: auto;
+    }
+
+    .input--radio {
+        width: 60%;
+        height: 35px;
+    }
+}

@@ -1,0 +1,16 @@
+## Project static
+/public/assets/*
+/public_html/assets/*
+/node_modules/*
+/vendor/*
+config.php
+gulpconfig.js
+
+## OS or IDE files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+.idea
+ehthumbs.db
+Thumbs.db

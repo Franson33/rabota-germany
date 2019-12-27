@@ -1,0 +1,11 @@
+.content-container__paragraph {
+    border-top: 1px solid #51d000;
+    border-bottom: 1px solid #51d000;
+    padding: 15px 0;
+}
+
+@media (max-width: 648px) {
+    .content-container__paragraph {
+        text-align: center;
+    }
+}

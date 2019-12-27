@@ -1,0 +1,21 @@
+exports.config = {
+    sourcesFilePath: {
+        css: './src/css/',
+        js: './src/js/',
+        images: './src/images/**/*',
+        fonts: './src/fonts/**/*',
+        video: './src/video/**/*'
+    },
+    compiledFilePath: {
+        css: './public/assets/css',
+        js: './public/assets/js',
+        images: './public/assets/images',
+        fonts: './public/assets/fonts',
+        video: './public/assets/video'
+    },
+    outputNames: {
+        css: 'styles.min.css',
+        js: 'scripts.min.js'
+    },
+    isDev: false
+};

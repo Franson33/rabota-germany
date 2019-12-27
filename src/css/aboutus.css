@@ -1,0 +1,67 @@
+.content-container__text {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.text__paragraph {
+    margin: 0 0 0 0;
+}
+
+.main-content__video-container {
+    display: flex;
+    width: 100%;
+}
+
+.video-container__video {
+    width: 800px;
+    height: 450px;
+    margin: 20px auto;
+}
+
+.main-content__diplomas {
+    display: flex;
+    width: 100%;
+}
+
+.diplomas__item {
+    display: flex;
+    width: 47%;
+    margin: auto;
+}
+
+.item__photo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-container__photo {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.photo-container__photo:first-child {
+    width: 250px;
+}
+
+@media (max-width: 1024px) {
+    .video-container__video {
+        width: 600px;
+        height: 340px;
+    }
+
+    .main-content__diplomas {
+        flex-direction: column;
+    }
+
+    .diplomas__item {
+        width: 95%;
+    }
+}
+
+@media (max-width: 648px) {
+    .video-container__video {
+        width: 280px;
+        height: 160px;
+    }
+}

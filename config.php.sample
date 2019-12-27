@@ -1,0 +1,43 @@
+<?php
+/*** Absolute path to Project ***/
+define('ROOT_PATH', __DIR__ . '/');
+
+/*** Version of project ***/
+define('CACHE_VERSION', '1.1');
+
+/*** Site Host (For advanced users only) ***/
+define('PROJECT_HOST', $_SERVER[ 'HTTP_HOST' ]);
+
+/*** Site Url (For advanced users only) ***/
+define('PROJECT_URL', 'https://' . PROJECT_HOST . '/');
+define('ASSETS_URL', PROJECT_URL . 'assets/');
+
+/*** Users who will receive messages from the site ***/
+define('ADMIN_EMAIL', 'admin@domain.loc');
+define('CC_EMAIL', 'cc_01@domain.loc|cc_02@domain.loc|cc_NN@domain.loc');
+
+/*** Mail settings ***/
+define( 'SMTP_ON', false );
+define( 'SMTP_HOST', 'smtp.host.loc' );
+define( 'SMTP_AUTH', false );
+define( 'SMTP_USER', 'noreply@domain.loc' );
+define( 'SMTP_PASSWORD', '' );
+define( 'SMTP_SECURE', 'TSL' );
+define( 'SMTP_PORT', '587' );
+
+/*** Data for Yandex services ***/
+define('YANDEX_VERIFICATION_CONTENT', '');
+define('YANDEX_COUNTER_NUMBER', 0);
+/*** Data Google services ***/
+define('GOOLE_VERIFICATION_CONTENT', '');
+define('GOOLE_ANALYTICS_TRACKING_ID', '');
+
+/*** Connect Functions of Project ***/
+if (file_exists(ROOT_PATH . 'libs/functions.php')) {
+    require_once ROOT_PATH . 'libs/functions.php';
+}
+
+if (file_exists(ROOT_PATH . 'libs/data.php')) {
+    require_once ROOT_PATH . 'data.php';
+}
+
