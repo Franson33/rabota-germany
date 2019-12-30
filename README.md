@@ -16,4 +16,4 @@
 - Run `npm install` (Install all js dependencies. Gulp etc.)
 - Run `gulp default` or `gulp default watch` for watch project files (Build project files) 
 
-After GULP finished your project is ready.
+After GULP finished your project is ready!
