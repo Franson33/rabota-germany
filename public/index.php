@@ -31,7 +31,7 @@
             <p class="item-box__content">Опыт работы</p>
         </div>
         <div class="content-item__item-box demands--box main-item--border">
-            <p class="item-box__content">Знание немецкого не&nbsp;обязательно</p>
+            <p class="item-box__content">Знание немецкого не обязательно</p>
         </div>
     </div>
     <div class="main-content__content-item block--providing JS-block-3">
@@ -39,7 +39,7 @@
             <h3 class="item-box__content item--title">КОМПАНИЯ ПРЕДОСТАВЛЯЕТ</h3>
         </div>
         <div class="content-item__item-box providing--box main-item--border">
-            <p class="item-box__content">Транспортировка от&nbsp;места проживания до&nbsp;места работы, автобусами
+            <p class="item-box__content">Транспортировка от места проживания до&nbsp;места работы, автобусами
                 8+1</p>
         </div>
         <div class="content-item__item-box providing--box main-item--border">
