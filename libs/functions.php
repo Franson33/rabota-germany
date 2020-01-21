@@ -109,7 +109,6 @@ if ( !function_exists( 'mgmSendMail' ) ) {
         }
 
         $phpMailer = new PHPMailer( true );
-        $phpMailer->SMTPDebug = 0;
         $phpMailer->CharSet = 'utf-8';
 
         if ( SMTP_ON ) {

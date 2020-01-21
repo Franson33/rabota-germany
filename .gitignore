@@ -8,6 +8,8 @@ gulpconfig.js
 .bash_history
 .cache
 .gitconfig
+access_log
+error_log
 
 ## OS or IDE files
 .DS_Store
