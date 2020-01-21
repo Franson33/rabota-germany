@@ -1,10 +1,13 @@
-## Project static
+	## Project static
 /public/assets/*
 /public_html/assets/*
 /node_modules/*
 /vendor/*
 config.php
 gulpconfig.js
+.bash_history
+.cache
+.gitconfig
 
 ## OS or IDE files
 .DS_Store
