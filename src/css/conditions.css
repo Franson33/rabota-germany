@@ -2,6 +2,7 @@
     border-top: 1px solid #51d000;
     border-bottom: 1px solid #51d000;
     padding: 15px 0;
+    text-align: center;
 }
 
 @media (max-width: 648px) {
