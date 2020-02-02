@@ -62,8 +62,8 @@
 .body {
     font-family: "Verdana", serif;
     font-size: 16px;
-    line-height: 30px;
-    color: white;
+    line-height: 24px;
+    color: black;
     background-color: white;
     margin: 0;
     overflow-x: hidden;
@@ -759,10 +759,6 @@
 }
 
 @media (max-width: 1024px) {
-
-    .main-container__main-content {
-        height: 1300px;
-    }
 
     .item-box__content {
         line-height: 22px;

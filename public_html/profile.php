@@ -27,8 +27,8 @@
             <input class="form-item__profile-input" type="text" name="nationality" id="nation-name-input" required>
         </div>
         <div class="profile-form__form-item">
-            <label class="form-item__profile-label" for="birth-name-input">ДАТА РОЖДЕНИЯ</label>
-            <input class="form-item__profile-input" type="text" name="birth-date" id="birth-name-input" placeholder=" день/месяц/год" required>
+            <label class="form-item__profile-label" for="birth-date-input">ДАТА РОЖДЕНИЯ</label>
+            <input class="form-item__profile-input" type="text" name="birth-date" id="birth-date-input" placeholder=" день/месяц/год" required>
         </div>
         <div class="profile-form__form-item">
             <label class="form-item__profile-label" for="full-years-input">ПОЛНЫХ ЛЕТ</label>
