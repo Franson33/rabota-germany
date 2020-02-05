@@ -40,6 +40,96 @@ $expirience = isset($data['expirience']) ? $data['expirience'] : '';
 $termOfStay = isset($data['term-stay']) ? $data['term-stay'] : '';
 $permit = isset($data['permit']) ? $data['permit'] : '';
 
+if (!$name) {
+    $errors[] = 'Имя: не должны быть пустыми';
+} elseif (mb_strlen($name, 'utf-8') < 3) {
+    $errors[] = 'Имя: не менее 3 символов';
+} elseif (mb_strlen($name, 'utf-8') > 20) {
+    $errors[] = 'Имя: не более 20 символов';
+}
+
+if (!$familyName) {
+    $errors[] = 'Фамилия: не должны быть пустыми';
+} elseif (mb_strlen($familyName, 'utf-8') < 3) {
+    $errors[] = 'Фамилия: не менее 3 символов';
+} elseif (mb_strlen($familyName, 'utf-8') > 20) {
+    $errors[] = 'Фамилия: не более 20 символов';
+}
+
+if (!$nation) {
+    $errors[] = 'Национальность: не должны быть пустыми';
+} elseif (mb_strlen($nation, 'utf-8') < 3) {
+    $errors[] = 'Национальность: не менее 3 символов';
+} elseif (mb_strlen($nation, 'utf-8') > 30) {
+    $errors[] = 'Национальность: не более 30 символов';
+}
+
+if (!$birthDate) {
+    $errors[] = 'Дата рождения: не должны быть пустыми';
+} elseif (mb_strlen($birthDate, 'utf-8') < 3) {
+    $errors[] = 'Дата рождения: не менее 3 символов';
+} elseif (mb_strlen($birthDate, 'utf-8') > 12) {
+    $errors[] = 'Дата рождения: не более 12 символов';
+}
+
+if (!$fullYears) {
+    $errors[] = 'Полных лет: не должны быть пустыми';
+} elseif (mb_strlen($fullYears, 'utf-8') < 1) {
+    $errors[] = 'Полных лет: не менее 1 символов';
+} elseif (mb_strlen($fullYears, 'utf-8') > 3) {
+    $errors[] = 'Полных лет: не более 3 символов';
+}
+
+if (!$adress) {
+    $errors[] = 'Адрес: не должны быть пустыми';
+} elseif (mb_strlen($adress, 'utf-8') < 10) {
+    $errors[] = 'Адрес: не менее 10 символов';
+} elseif (mb_strlen($adress, 'utf-8') > 100) {
+    $errors[] = 'Адрес: не более 100 символов';
+}
+
+if (!$telephone) {
+    $errors[] = 'Номер телефона: не должен быть пустым';
+} elseif (mb_strlen($telephone, 'utf-8') < 10) {
+    $errors[] = 'Номер телефона: не менее 10 символов';
+} elseif (mb_strlen($telephone, 'utf-8') > 20) {
+    $errors[] = 'Номер телефона: не более 20 символов';
+}
+
+if (!$email || $email > 150 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Адрес электронной почты: некорректный адрес';
+
+if (!$institute) {
+    $errors[] = 'Образование: не должны быть пустыми';
+} elseif (mb_strlen($institute, 'utf-8') < 5) {
+    $errors[] = 'Образование: не менее 5 символов';
+} elseif (mb_strlen($institute, 'utf-8') > 80) {
+    $errors[] = 'Образование: не более 80 символов';
+}
+
+if (!$specialization) {
+    $errors[] = 'Специальность: не должны быть пустыми';
+} elseif (mb_strlen($specialization, 'utf-8') < 5) {
+    $errors[] = 'Специальность: не менее 5 символов';
+} elseif (mb_strlen($specialization, 'utf-8') > 80) {
+    $errors[] = 'Специальность: не более 80 символов';
+}
+
+if (!$expirience) {
+    $errors[] = 'Опыт работы: не должны быть пустыми';
+} elseif (mb_strlen($expirience, 'utf-8') < 3) {
+    $errors[] = 'Опыт работы: не менее 3 символов';
+} elseif (mb_strlen($expirience, 'utf-8') > 200) {
+    $errors[] = 'Опыт работы: не более 200 символов';
+}
+
+if (!$termOfStay) {
+    $errors[] = 'Срок прибывания: не должны быть пустыми';
+} elseif (mb_strlen($termOfStay, 'utf-8') < 3) {
+    $errors[] = 'Срок прибывания: не менее 3 символов';
+} elseif (mb_strlen($termOfStay, 'utf-8') > 80) {
+    $errors[] = 'Срок прибывания: не более 80 символов';
+}
 
 if (!empty($errors)) {
     $errorMsg = implode('<br />', $errors);
