@@ -98,6 +98,7 @@ if (!$telephone) {
 
 if (!$email || $email > 150 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors[] = 'Адрес электронной почты: некорректный адрес';
+}
 
 if (!$institute) {
     $errors[] = 'Образование: не должны быть пустыми';
