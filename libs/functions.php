@@ -174,8 +174,14 @@ if ( !function_exists( 'mgmSendMail' ) ) {
 
             if ( is_array( $attachments ) && !empty( $attachments ) ) {
                 foreach ( $attachments as $attachment ) {
-                    if ( file_exists( $attachment ) ) {
-                        $phpMailer->addAttachment( $attachment );
+                    if (is_array($attachment)) {
+                        if ( file_exists( $attachment['path'] ) ) {
+                            $phpMailer->addAttachment( $attachment['path'], $attachment['name'] );
+                        }
+                    } else {
+                        if ( file_exists( $attachment ) ) {
+                            $phpMailer->addAttachment( $attachment );
+                        }
                     }
                 }
             }

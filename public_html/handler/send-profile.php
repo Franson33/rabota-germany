@@ -29,7 +29,7 @@ $maried = isset($data['maried']) ? $data['maried'] : '';
 $nation = isset($data['nationality']) ? $data['nationality'] : '';
 $birthDate = isset($data['birth-date']) ? $data['birth-date'] : '';
 $fullYears = isset($data['full-years']) ? $data['full-years'] : '';
-$gender = isset($data['gender']) ? $data[''] : 'gender';
+$gender = isset($data['gender']) ? $data['gender'] : '';
 $adress = isset($data['adress']) ? $data['adress'] : '';
 $telephone = isset($data['telephone']) ? $data['telephone'] : '';
 $email = isset($data['email']) ? $data['email'] : '';
@@ -39,6 +39,7 @@ $diploma = isset($data['diploma']) ? $data['diploma'] : '';
 $expirience = isset($data['expirience']) ? $data['expirience'] : '';
 $termOfStay = isset($data['term-stay']) ? $data['term-stay'] : '';
 $permit = isset($data['permit']) ? $data['permit'] : '';
+$attachFiles = [];
 
 if (!$name) {
     $errors[] = 'Имя: не должны быть пустыми';
@@ -132,6 +133,20 @@ if (!$termOfStay) {
     $errors[] = 'Срок прибывания: не более 80 символов';
 }
 
+if (empty($_FILES) || !isset($_FILES['diploma']) || !$_FILES['diploma']['tmp_name']) {
+    $errors[] = 'Сканкопия диплома: необходимо загрузить скан диплома';
+} else {
+    $degreeFile = $_FILES['diploma'];
+    $attachFiles[] = [
+        'name' => $degreeFile['name'],
+        'path' => $degreeFile['tmp_name'],
+    ];
+
+    if ($degreeFile['size'] > 1000000) {
+        $errors[] = 'Сканкопия диплома: не более 1 МБ';
+    }
+}
+
 if (!empty($errors)) {
     $errorMsg = implode('<br />', $errors);
     setFlashCookie($errorMsg);
@@ -155,12 +170,12 @@ $emailContent .= '<p>Специальность: <strong>' . $specialization . '
 $emailContent .= '<p>Диплом: <strong>' . $diploma . '</strong></p>';
 $emailContent .= '<p>Опыт работы: <strong>' . $expirience . '</strong></p>';
 $emailContent .= '<p>Срок прибывания: <strong>' . $termOfStay . '</strong></p>';
-$emailContent .= '<p>Разришение на работу: <strong>' . $permit . '</strong></p>';
+$emailContent .= '<p>Разрешение на работу: <strong>' . $permit . '</strong></p>';
 
 $emailContent .= '<hr>';
 $emailContent .= '<p>IP адрес: <strong>' . $user_ip . '</strong></p>';
 
-$sendMail = mgmSendMail([ADMIN_EMAIL], 'Анкета соискателя', $emailContent);
+$sendMail = mgmSendMail([ADMIN_EMAIL], 'Анкета соискателя', $emailContent, $attachFiles);
 
 if (!$sendMail) {
     setFlashCookie('Ошибка. Нам не удалось принять вашу заявку. Пожалуйста, проверьте подключение к интернету или повторите попытку позже!');
